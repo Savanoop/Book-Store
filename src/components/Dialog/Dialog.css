@@ -1,0 +1,11 @@
+.textField{
+  padding-bottom: 10px;
+}
+.dialog{
+  width: 500px;
+}
+.error{
+  color: red;
+  width: 300px;
+  font-size:13px;
+}

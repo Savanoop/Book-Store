@@ -1,0 +1,12 @@
+root{
+  max-width: 300px;
+}
+.media{
+  min-height: 140,
+}
+.footer{
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: aliceblue;
+}

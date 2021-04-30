@@ -1,0 +1,65 @@
+/* .root{
+  max-width: 345px;
+  display: flex;
+  
+} */
+.authorCard{
+  margin: 30px auto;
+  height: 300px;
+  border-radius: 2px;
+box-shadow:1px 2px 1px 2px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.media{
+  height: 140;
+  background-color: blue;
+}
+.dockCard {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 8px 0;
+}
+.about{
+  max-height: 182px;
+    min-height: 182px;
+    /* overflow: hidden; */
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    display: block;
+}
+.cardBox{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.authorHeader{
+  text-align: center;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 0;
+}
+.authorBackground{
+  width: 100%;
+    height: 90px;
+    margin-bottom: -30px;
+    position: relative;
+    z-index: -1;
+    background-size: cover;
+    background-position: 50%;
+}
+.authorInfo{
+  font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 4px 0;
+    padding: 0 10px;
+}
