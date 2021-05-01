@@ -1,5 +1,5 @@
 import { LoginTypes } from "../const/ActionTypes";
-import { books } from '../helper/data'
+import { author, books } from '../helper/data'
 
 export const getBookDetails = () => {
   return dispatch => {
@@ -9,6 +9,17 @@ export const getBookDetails = () => {
     dispatch({
       type: LoginTypes.GET_BOOKS_DETAILS_SUCCESS,
       payload: books
+    });
+  };
+};
+export const getAuthors = () => {
+  return dispatch => {
+    dispatch({
+      type: LoginTypes.GET_AUTHOR_DETAILS_LOADING
+    });
+    dispatch({
+      type: LoginTypes.GET_AUTHOR_DETAILS_SUCCESS,
+      payload: author
     });
   };
 };

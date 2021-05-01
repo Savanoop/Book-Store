@@ -100,7 +100,7 @@ class LoginPage extends React.Component {
     }
     else if (!testPass) {
       this.setState({
-        passwordError: 'Password should contain alphabet, numbers and minimum 6 charaters',
+        passwordError: 'Password should contain alphabet, numbers and minimum 6 characters',
         isPasswordError: true
       })
     }

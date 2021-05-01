@@ -10,3 +10,9 @@ root{
   text-align: center;
   background-color: aliceblue;
 }
+.description{
+  max-height: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}

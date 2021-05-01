@@ -4,8 +4,7 @@ import SearchAppBar from "../../../components/AppBar/AppBar";
 import BookCard from "../../../components/BookCard/BookCard";
 import Grid from '@material-ui/core/Grid';
 import DialogBox from "../../../components/Dialog/Dialog";
-import { addAuthorBooks } from "../../../actions/authorBooksAction";
-
+import './AuthorBook.css';
 class AuthorBook extends React.Component {
   constructor(props) {
     super(props);
@@ -35,23 +34,28 @@ class AuthorBook extends React.Component {
           addBook={true}
           logOut={this.logOut}
           onSearchChange={this.onSearchChange} />
-        <Grid container>
-          {this.props.authorBooks.map(book =>
-            <Grid item xs={12} sm={3}>
-              <div className={'card'}>
-                <BookCard
-                  name={book.name}
-                  language={book.language}
-                  price={book.price}
-                  id={book.id}
-                  description={book.description}
-                  publishYear={book.publish_year}
-                  img={book.img}
-                />
-              </div>
-            </Grid>
-          )}
-        </Grid>
+        {this.props.authorBooks.length ?
+          <Grid container>
+            {this.props.authorBooks.map(book =>
+              <Grid item xs={12} sm={3}>
+                <div className={'card'}>
+                  <BookCard
+                    name={book.name}
+                    language={book.language}
+                    price={book.price}
+                    id={book.id}
+                    description={book.description}
+                    publishYear={book.publish_year}
+                    img={book.img}
+                  />
+                </div>
+              </Grid>
+            )}
+          </Grid>
+          :
+          <div className={'noResult'}>
+            No Books Available
+          </div>}
         <DialogBox
           panel={this.state.addPanel}
           addBook={this.addBook}
@@ -76,9 +80,9 @@ class AuthorBook extends React.Component {
     addedBooks.push(bookDetails);
     localStorage.setItem('books', JSON.stringify(addedBooks));
     this.props.addAuthorBooks(bookDetails)
-    debugger
+    
     this.setState({
-      addPanel:false
+      addPanel: false
     })
 
   }

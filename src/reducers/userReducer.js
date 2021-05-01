@@ -13,6 +13,9 @@ export default (state = INITIAL_STATE, { type, payload }) => {
     case LoginTypes.GET_BOOKS_DETAILS_SUCCESS:
       return { ...state, items: payload, loading: false };
 
+      case LoginTypes.GET_AUTHOR_DETAILS_SUCCESS:
+      return { ...state, authors: payload, loading: false };
+
     default:
       return state;
   }

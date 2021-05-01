@@ -17,15 +17,15 @@ export default class BookCard extends React.Component {
           <CardActionArea>
             <CardMedia
               className={'media'}
-              image={this.props.img}
-              title={this.props.name}
+              // image={this.props.img}
+              // title={this.props.name}
               src={this.props.img}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 {this.props.name}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" className={'description'}>
                 {this.props.description}
               </Typography>
               <div className={'footer'}>

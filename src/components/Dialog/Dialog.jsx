@@ -82,7 +82,6 @@ export default function DialogBox(props) {
     setPrice(priceValue)
   }
   const onDateChange = (e) => {
-    debugger
     const publishedDate = e.target.value.slice(0,4)
     setPublishDate(publishedDate)
   }

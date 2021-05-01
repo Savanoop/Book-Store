@@ -2,9 +2,8 @@ import { LoginTypes } from "../const/ActionTypes";
 import { books } from '../helper/data'
 
 export const getAuthorBooks = (id) => {
-  console.log(books);
    const localData = localStorage.getItem('books') && JSON.parse(localStorage.getItem('books'))
-   const localAuthorData = localData.filter(book => book.author_id === id);
+   const localAuthorData = localData ? localData.filter(book => book.author_id === id): [];
   const authorBooks = books.filter(book => book.author_id === id);
   return dispatch => {
     dispatch({
